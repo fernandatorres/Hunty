@@ -1,12 +1,11 @@
   package TestNG;
 import com.google.common.annotations.VisibleForTesting;
-import dev.failsafe.internal.util.Assert;
+//import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import  org.testng.Asset;
 import org.testng.annotations.*;
-
+import org.testng.Assert;
 public class testN {
     private String url = "https://demoqa.com/";
     WebDriver driver;
@@ -26,14 +25,14 @@ public class testN {
         String expectedTitle = "ToolsQA";
         String actualTitle = driver.getTitle();
 
-        Assert.asserEquals(actualTitle,expectedTitle);
+        Assert.assertEquals(actualTitle,expectedTitle);
     }
     @Test
     public void urlTest()
     {
-        String actualUrl = driver.getCurrentUrl():
+        String actualUrl = driver.getCurrentUrl();
 
-        Assert.asserEquals(actualUrl, url);
+        Assert.assertEquals(actualUrl, url);
 
     }
     @AfterTest
@@ -41,7 +40,6 @@ public class testN {
     {
         driver.quit();
     }
-
 
 
 }
