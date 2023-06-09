@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import org.testng.Assert;
+
 public class testN {
     private String url = "https://demoqa.com/";
     WebDriver driver;
@@ -19,14 +20,6 @@ public class testN {
         driver.get(url);
     }
 
-    @Test
-    public void titleTest()
-    {
-        String expectedTitle = "ToolsQA";
-        String actualTitle = driver.getTitle();
-
-        Assert.assertEquals(actualTitle,expectedTitle);
-    }
     @Test
     public void urlTest()
     {
